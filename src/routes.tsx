@@ -8,8 +8,8 @@ export default function Routes() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/" exact component={Contact} />
-        <Route path="/person" component={Person} />
+        <Route path="/" exact component={Person} />
+        <Route path="/pontact" component={Contact} />
         <Route path="/professional" component={Professional} />
       </Switch>
     </BrowserRouter>
