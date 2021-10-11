@@ -1,10 +1,10 @@
 import { useHistory } from 'react-router';
-import { useForm } from '../../hooks/useForm';
 import { Container, FormPerson } from './styles';
+import { useForm } from '../../hooks/useForm';
+import { Button } from '../../components/Button';
 
 function Person() {
   const history = useHistory();
-
   const { name, handleName } = useForm();
 
   function handleNextStep() {
@@ -30,9 +30,8 @@ function Person() {
             autoFocus
           />
       </FormPerson>
-      <button onClick={handleNextStep}>
-        Próximo
-      </button>
+      
+      <Button title="Próximo" onClick={handleNextStep} />
     </Container>
   )
 }

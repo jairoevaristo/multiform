@@ -25,20 +25,6 @@ export const Container = styled.div`
     padding-bottom: 36px;
     border-bottom: solid 1px #16195C;
   }
-
-  button {
-    margin-top: 80px;
-    padding: 20px 40px;
-    color: #FFF;
-    font-size: 16px;
-    background-color: #25CD89;
-    border-radius: 30px;
-    cursor: pointer;
-
-    &:hover {
-      background-color: #25CD70;
-    }
-  }
 `;
 
 export const FormPerson = styled.div`

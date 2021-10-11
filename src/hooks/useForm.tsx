@@ -1,6 +1,6 @@
 import { ChangeEvent, createContext, ReactNode, useContext, useState } from 'react';
 
-enum TypeLevel {
+export enum TypeLevel {
   INITIAL = 0,
   PROFESSIONAL = 1,
 }
