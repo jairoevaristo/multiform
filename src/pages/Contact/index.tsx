@@ -8,12 +8,22 @@ import { InputComponent } from '../../components/InputComponent';
 
 function Contact() {
   const history = useHistory();
-  const { name, github, email, handleEmail, handleGithub, level } = useForm();
+  const {
+    name,
+    github,
+    email,
+    handleEmail,
+    handleGithub,
+    level,
+    handleCurrentStep
+  } = useForm();
 
   useEffect(() => {
     if (name === '') {
       history.push('/');
     }
+
+    handleCurrentStep(2);
   }, []);
 
   function handleComplete() {

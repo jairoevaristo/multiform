@@ -8,7 +8,7 @@ import { useEffect } from 'react';
 
 function Professional() {
   const history = useHistory();
-  const { name, level, handleLevel } = useForm();
+  const { name, level, handleLevel, handleCurrentStep } = useForm();
 
   function handleNextStep() {
     history.push('/contact');
@@ -18,6 +18,8 @@ function Professional() {
     if (name === '') {
       history.push('/');
     }
+
+    handleCurrentStep(1);
   }, []);
 
   return (

@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useHistory } from 'react-router';
 import { Container } from './styles';
 import { useForm } from '../../hooks/useForm';
@@ -6,13 +7,17 @@ import { Button } from '../../components/Button';
 
 function Person() {
   const history = useHistory();
-  const { name, handleName } = useForm();
+  const { name, handleName, handleCurrentStep } = useForm();
 
   function handleNextStep() {
     if (name === "" || name.length < 8) return;
 
     history.push('/professional');
   }
+
+  useEffect(() => {
+    handleCurrentStep(0);
+  }, []);
 
   return (
     <Container>

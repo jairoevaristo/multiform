@@ -8,6 +8,7 @@ export const Content = styled.div`
   display: flex;
   margin: 0 auto;
   flex-direction: column;
+  justify-content: center;
   max-width: 980px;
   min-height: 100vh;
 `;
@@ -18,6 +19,7 @@ export const Wrapper = styled.div`
 export const SideBar = styled.div`
   width: 240px;
   border-right: 1px solid #16195C;
+  position: relative;
 `;
 
 export const FormArea = styled.div`
