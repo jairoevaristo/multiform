@@ -1,6 +1,7 @@
 import { useHistory } from 'react-router';
-import { Container, FormPerson } from './styles';
+import { Container } from './styles';
 import { useForm } from '../../hooks/useForm';
+import { InputComponent } from '../../components/InputComponent';
 import { Button } from '../../components/Button';
 
 function Person() {
@@ -19,17 +20,12 @@ function Person() {
       <h3>Os campos são obrigatórios</h3>
       <p>Preencha os campos abaixo com seu nome completo</p>
 
-      <FormPerson>
-        <label>
-          Seu nome completo
-        </label>
-          <input 
-            type="text"
-            value={name}
-            onChange={handleName}
-            autoFocus
-          />
-      </FormPerson>
+      <InputComponent
+        onChange={handleName}
+        value={name}
+      >
+        Seu nome completo
+      </InputComponent>
       
       <Button title="Próximo" onClick={handleNextStep} />
     </Container>
